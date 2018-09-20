@@ -12,11 +12,11 @@ const question =
     
   {
     type : 'input',
-    name : 'nombre de places debout',
+    name : 'nombre_de_places_debout',
     message : 'Quelle est le nombre de places debout de votre Vehicule'
 }, {
     type : 'input',
-    name : 'nombre de portes',
+    name : 'nombre_de_portes',
     message : 'Quelle est le nombre de portes de votre Vehicule'
 },  {
     type : 'input',
@@ -35,12 +35,12 @@ const question =
 },
  {
     type : 'input',
-    name : 'nombre de sièges',
+    name : 'nombre_de_sièges',
     message : 'Quelle est le nombre de sièges de votre Vehicule'
  },
 {
     type : 'input',
-    name : 'nombre de voies d_acces',
+    name : 'nombre_de_voies_d_acces',
     message : 'Quelle est le nombre de voies d_acces de votre Vehicule'
 }
 
