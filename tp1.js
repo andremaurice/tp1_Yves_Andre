@@ -1,6 +1,13 @@
-const inquirer = require ('inquirer');
 
-const question =
+//Fonction pour ajouter un véhicule//
+
+const ask = function(question)
+{const inquirer = require('inquirer'); 
+inquirer.prompt(question).then(function(answers)
+{console.log(answers)});}
+
+//Array de questions//
+const var0 =
 [
  
     {
@@ -49,8 +56,4 @@ const question =
   
 ];
 
-
-inquirer.prompt (question).then (function (answer){
-    console.log (answer);
-    return answer;
-});
+vehicule1=ask(var0);
