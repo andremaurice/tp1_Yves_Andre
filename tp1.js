@@ -2,17 +2,19 @@
 const fs= require ('fs');
 //Fonction pour ajouter un véhicule//
 
+//Fonction pour storer//
+const ecrire = function(tableau)
+{const written = JSON.stringify(tableau, null, 2);
+    fs.writeFile('student.json', written, (err) => {
+        if (err) throw err;
+        console.log('Tableau ecrit');
+        });
+};
 const ask = function(question)
 {const inquirer = require('inquirer'); 
 inquirer.prompt(question).then(function(answers)
-{console.log(answers)});}
-
-
-//Fonction pour storer//
-const ecrire = function(data)
-{let written = JSON.stringify(data);
-fs.writeFileSync('tableau.json', data);
-}
+{ecrire(answers);
+    console.log(answers)});};
 
 
 //Array de questions//
@@ -63,7 +65,3 @@ const var0 =
 ];
 
 veh1=ask(var0);
-
-ecrire(veh1);
-
-
