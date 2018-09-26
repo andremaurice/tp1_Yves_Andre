@@ -1,10 +1,26 @@
 
+const fs= require ('fs');
 //Fonction pour ajouter un véhicule//
 
+//Fonction pour storer//
+const ecrire = function(tableau)
+{const written = JSON.stringify(tableau, null, 2);
+    fs.writeFile('student.json', written, (err) => {
+        if (err) throw err;
+        console.log('Tableau ecrit');
+        });
+};
 const ask = function(question)
 {const inquirer = require('inquirer'); 
+<<<<<<< HEAD
 inquirer.prompt(question).then(function (answers)
 {console.log(answers)});}
+=======
+inquirer.prompt(question).then(function(answers)
+{ecrire(answers);
+    console.log(answers)});};
+
+>>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
 
 
 
@@ -15,6 +31,7 @@ const var0 =
     {
         type : 'input',
         name : 'identifiant',
+<<<<<<< HEAD
         message : 'Quelle est le numero d_identification  de votre Vehicule',
         validate: function(value) {
             
@@ -24,6 +41,9 @@ const var0 =
           filter: Number     
 
        
+=======
+        message : 'Quelle est le numero d_identification  de votre Vehicule'   
+>>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
     },
 
 
@@ -104,12 +124,16 @@ const var0 =
       },
       filter: Number  
 }
+<<<<<<< HEAD
      
        
+=======
+>>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
 
   
 ];
 
+<<<<<<< HEAD
 vehicule1=ask(var0);
 
 //inquirer.prompt(questions).then(answers => {
@@ -119,3 +143,6 @@ vehicule1=ask(var0);
 
 
 
+=======
+veh1=ask(var0);
+>>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
