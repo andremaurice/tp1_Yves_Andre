@@ -41,27 +41,12 @@ let ecrire = function(tableau)
         console.log('Tableau ecrit').ask;
         });
 };
-<<<<<<< HEAD
-const ask = function(question)
-{const inquirer = require('inquirer'); 
-<<<<<<< HEAD
-inquirer.prompt(question).then(function (answers)
-{console.log(answers)});}
-=======
-inquirer.prompt(question).then(function(answers)
-{ecrire(answers);
-    console.log(answers)});};
-=======
 
 let lire = function()
 {fs.readFile('student.json', (err,data) => {
     if (err) throw err;
     let student = JSON.parse(data);
     console.log(student);})};
->>>>>>> 82348efe767ecb9f7b4fb69df8a3f6be57538031
-
->>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
-
 
 
 let menu = function(commande)
@@ -71,35 +56,11 @@ let menu = function(commande)
 let var1 =
     [
      
-        {
-            type : 'input',
-            name : 'identifiant',
-            message : 'Quelle est le numero d_identification  de votre Vehicule'   
-        },
-        
-      {
-        type : 'input',
-        name : 'nombre_de_places_debout',
-        message : 'Quelle est le nombre de places debout de votre Vehicule'
-    }, {
-        type : 'input',
-        name : 'nombre_de_portes',
-        message : 'Quelle est le nombre de portes de votre Vehicule'
-    },  {
-        type : 'input',
-        name : 'immatriculation',
-        message : 'Quelle est l_immatriculation de votre Vehicule'
-    },
-     {
-        type : 'input',
-        name : 'fabricant',
-        message : 'Quelle est le fabricant de votre Vehicule'
-    },
+       
+ 
     {
         type : 'input',
-<<<<<<< HEAD
         name : 'identifiant',
-<<<<<<< HEAD
         message : 'Quelle est le numero d_identification  de votre Vehicule',
         validate: function(value) {
             
@@ -109,9 +70,6 @@ let var1 =
           filter: Number     
 
        
-=======
-        message : 'Quelle est le numero d_identification  de votre Vehicule'   
->>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
     },
 
 
@@ -190,48 +148,11 @@ let var1 =
         var valid = !isNaN(parseFloat(value));
         return valid || "entrer un nombre de voies d'accès valide";
       },
-      filter: Number  
-}
-<<<<<<< HEAD
-     
-       
-=======
->>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
-=======
-        name : 'modele',
-        message : 'Quelle est le modèle de votre Vehicule'
-    },
-     {
-        type : 'input',
-        name : 'nombre_de_sièges',
-        message : 'Quelle est le nombre de sièges de votre Vehicule'
-     },
-    {
-        type : 'input',
-        name : 'nombre_de_voies_d_acces',
-        message : 'Quelle est le nombre de voies d_acces de votre Vehicule'
+      filter: Number 
     }
-      
     ];
 
 
 menu(var0);
->>>>>>> 82348efe767ecb9f7b4fb69df8a3f6be57538031
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-vehicule1=ask(var0);
-
-//inquirer.prompt(questions).then(answers => {
-  //  console.log('\nOrder receipt:');
-    //console.log(JSON.stringify(answers, null, '  '));
-  //});
-
-
-
-=======
-veh1=ask(var0);
->>>>>>> 55ae9e14e2cce3ff7254b56100b73bdff183a6bb
-=======
->>>>>>> 82348efe767ecb9f7b4fb69df8a3f6be57538031
