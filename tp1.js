@@ -133,6 +133,12 @@ let lire = function()
     let student = JSON.parse(data);
     console.log(student);})};
 
+//Fonction pour retirer//
+let retire = function(liste,position)
+{liste.splice(position,1)}
+
+//Fonction pour modifier//
+
 
 //Fonction pour saisir des informations pour le menu principal//
 let ask = function(question)
@@ -163,6 +169,7 @@ let menu = function(commande)
 {
     ask(commande);}
     
+
 
 
 menu(var0);
