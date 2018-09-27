@@ -3,56 +3,7 @@ var fs = require('fs');
 var inquirer = require('inquirer'); 
 
 //**Declaration de variables**//
-
-//Question du menu principal//
-let var0 = 
-    {
-        type : 'input',
-        name : 'choix',
-        message : 'Bienvenue au gestionnaire de bus \n\n\n Voulez-vous ajouter un vehicule? (Taper 1) \n Voulez-vous modifier un vehicule? (Taper 2) \n Voulez-vous retirer un vehicule? (Taper 3)\n\n'   
-    };
-    //Question d'ajout de vehicule//
-
-let table1 = [];
-//**Fonctions**//
-
-let ask = function(question)
-{ inquirer.prompt(question).then(function(answers)
-    {
-        if(answers.choix == 1)
-        {ask(var1);}
-            
-        else if (answers.choix == 2)
-        {ask(var0);
-    }
-        else if (answers.choix == 3)
-        {console.log('Tres bon');
-    }
-    
-        else
-        {console.log(answers.choix);
-    };
-    })};
-
-let ecrire = function(tableau)
-{let  written = JSON.stringify(tableau, null, 2);
-    fs.writeFile('student.json', written, (err) => {
-        if (err) throw err;
-        console.log('Tableau ecrit').ask;
-        });
-};
-
-let lire = function()
-{fs.readFile('student.json', (err,data) => {
-    if (err) throw err;
-    let student = JSON.parse(data);
-    console.log(student);})};
-
-
-let menu = function(commande)
-{
-    ask(commande);}
-    
+  //Array de questions d'ajout de vehicule//
 let var1 =
     [
      
@@ -153,6 +104,68 @@ let var1 =
     ];
 
 
+//Question du menu principal//
+let var0 = 
+    {
+        type : 'input',
+        name : 'choix',
+        message : 'Bienvenue au gestionnaire de bus \n\n\n Voulez-vous ajouter un vehicule? (Taper 1) \n Voulez-vous modifier un vehicule? (Taper 2) \n Voulez-vous retirer un vehicule? (Taper 3)\n\n'   
+    };
+  
+
+let table1 = [];
+
+//**Fonctions**//
+
+//Fonction pour storer dans un fichier json//
+let ecrire = function()
+{let  written = JSON.stringify(tableau, null, 2);
+    fs.writeFile('student.json', written, (err) => {
+        if (err) throw err;
+        console.log('Tableau ecrit');
+        });
+};
+
+//Fonction pour lire le fichier JSON//
+let lire = function()
+{fs.readFile('vehicule.json', (err,data) => {
+    if (err) throw err;
+    let student = JSON.parse(data);
+    console.log(student);})};
+
+
+//Fonction pour saisir des informations pour le menu principal//
+let ask = function(question)
+{
+    
+     inquirer.prompt(question).then(function(answers)
+    {
+        if(answers.choix == 1)
+        {ask(var1)
+            }
+    
+            
+        else if (answers.choix == 2)
+        {ask(var0);
+    }
+        else if (answers.choix == 3)
+        {console.log('Tres bon');
+    }
+    
+        else
+        {console.log(answers.choix);
+    };
+    })};
+
+//Fonction du menu principal//
+
+let menu = function(commande)
+{
+    ask(commande);}
+    
+
+
 menu(var0);
+
 
 
